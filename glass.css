@@ -1,0 +1,84 @@
+/* UI/UX Pro Max Glassmorphism Overrides */
+
+/* Glass Cards & Containers */
+.note,
+.flash-card,
+.expectation-card,
+.memory-list p,
+.spotify-panel,
+.video-stage-caption,
+dialog {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  color: var(--ink) !important;
+  border-radius: 16px !important;
+}
+
+/* Specific Adjustments */
+.hero-video-stage {
+  background: rgba(15, 23, 42, 0.4) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  border-radius: 20px !important;
+}
+
+.flash-card:hover,
+.expectation-card:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Button Upgrades */
+.primary-action,
+.heart-button,
+#surpriseBtn {
+  background: linear-gradient(135deg, var(--rose), var(--peacock)) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  transition: all 0.3s ease !important;
+}
+
+.primary-action:hover,
+.heart-button:hover,
+#surpriseBtn:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 8px 25px rgba(244, 63, 94, 0.6) !important;
+}
+
+/* Dialog Backdrop */
+dialog::backdrop {
+  background: rgba(2, 6, 23, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Text & Headings Readability in Dark Mode */
+h1, h2, h3, p.tiny-title, .note-kicker {
+  color: var(--ink) !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5) !important;
+}
+
+.shayari, .eyebrow {
+  color: var(--muted) !important;
+}
+
+/* Fixing SVG/Icons for Dark Mode */
+.name-flower, .spotify-bubble-icon, .spotify-panel-icon {
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+}
+
+/* Focus States for Accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--rose) !important;
+  outline-offset: 2px !important;
+}
